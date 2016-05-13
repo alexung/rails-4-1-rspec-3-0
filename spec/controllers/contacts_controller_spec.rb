@@ -88,6 +88,7 @@ describe ContactsController do
   end
 
   describe 'PATCH #update' do
+    # before each spec is run
     before :each do
       @contact = create(:contact, firstname: 'Lawrence', lastname: 'Smith')
     end
@@ -95,6 +96,7 @@ describe ContactsController do
     context "with valid attributes" do
       it "locates the requested @contact" do
         patch :update, id: @contact, contact: attributes_for(:contact)
+        expect(assigns(:contact)).to eq(@contact)
       end
 
       it "changes @contact's attributes" do
