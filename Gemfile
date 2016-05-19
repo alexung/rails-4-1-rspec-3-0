@@ -44,6 +44,8 @@ gem 'bootstrap-sass', '~> 3.1.1'
 group :development, :test do
   gem "rspec-rails", "~> 3.1.0"
   gem "factory_girl_rails", "~> 4.4.1"
+  # gem "spring-commands-rspec", "~> 1.0.2"
+  # gem "guard-rspec"
 end
 
 # this is to include gems in just the test environments
@@ -54,5 +56,5 @@ group :test do
   gem "capybara", "~> 2.4.3"
   gem "database_cleaner", "~> 1.3.0"
   gem "launchy", "~> 2.4.2"
-  gem "selenium-webdriver"
+  gem "selenium-webdriver", "~> 2.53.0"
 end
